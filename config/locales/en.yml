@@ -1,18 +1,33 @@
 en:
   layouts:
     application:
-      title: "Ruby on Rails Tutorial Sample App"
+      title: "Ruby on Rails Project 1"
     footer:
       about: "About"
       author: "Project 1 - Tu Anh"
       contact: "Contact"
     header:
+      account: "Account"
       base_title: "Project 1"
       english: "English"
       help: "Help"
       home: "Home"
       language: "Language"
+      login: "Log in"
+      logout: "Log out"
+      profile: "Profile"
+      settings: "Settings"
+      signup: "Sign up"
+      users: "Users"
       vietnamese: "Vietnamese"
+  sessions:
+    create:
+      failed_login: "Log in failed"
+      login_success: "Log in successfully"
+    destroy:
+      logout_success: "Log out successfully"
+    new:
+      login: "Log in"
   static_pages:
     about:
       about: "About"
@@ -30,6 +45,13 @@ en:
     error_messages:
       error: "error"
       form: "The form contains "
+    form_login:
+      email: "Email"
+      login: "Log in"
+      name: "Name"
+      new_user: "New user? "
+      password: "Password"
+      signup_now: "Sign up now!"
   users:
     form:
       confirmation: "Confirmation"

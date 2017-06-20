@@ -22,6 +22,11 @@
           </ul>
         </li>
       </ul>
+      <% if logged_in? %>
+        <%= render "layouts/header_login" %>
+      <% else %>
+        <%= render "layouts/header_no_login" %>
+      <% end %>
     </div>
   </div>
 </header>
