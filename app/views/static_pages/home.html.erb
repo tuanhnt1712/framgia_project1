@@ -1,0 +1,15 @@
+<% provide :title, t(".home") %>
+<div class="container-responsive">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-8">
+        <div class="center jumbotron">
+          <h1><%= t ".welcome" %></h1>
+          <h2><%= t ".pragraph" %></h2>    
+          <%= link_to t(".signup"), "#", class: "btn btn-lg btn-primary" %>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-4">
+        <h3><%= t ".login" %></h3>
+      </div>
+    </div>
+  </div>
