@@ -1,0 +1,15 @@
+/.bundle
+
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/config/database.yml
+
+/log/*
+/tmp/*
+/spec/*
+/test/*
+!/log/.keep
+!/tmp/.keep
+
+.byebug_history
+Gemfile.lock
