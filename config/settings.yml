@@ -7,3 +7,5 @@ post:
   maximum_content: 1000
 comment:
   maximum_content: 140
+helper:
+  avatar_size: 80

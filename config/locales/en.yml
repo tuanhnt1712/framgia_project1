@@ -26,4 +26,19 @@ en:
       pragraph: "We hope that my page will be useful with you"
       signup: "Sign up now!"
       welcome: "Welcome to my page"
-  
+  shared:
+    error_messages:
+      error: "error"
+      form: "The form contains "
+  users:
+    form:
+      confirmation: "Confirmation"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+    new:
+      create_account: "Create my account"
+      signup: "Sign up"
+    create:
+      signup_success: "Welcome to the app"
+      error_signup: "sign up failed"
