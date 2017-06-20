@@ -39,6 +39,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -50,6 +51,10 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    config (1.2.1)
+      activesupport (>= 3.0)
+      deep_merge (~> 1.0, >= 1.0.1)
+    deep_merge (1.1.1)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -80,6 +85,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    pg (0.18.4)
     puma (3.9.1)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -154,11 +160,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   byebug
   coffee-rails (~> 4.2)
+  config (= 1.2.1)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  pg (= 0.18.4)
   puma (~> 3.0)
   rails (~> 5.0.4)
   sass-rails (~> 5.0)
