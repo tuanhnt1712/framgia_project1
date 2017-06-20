@@ -1,0 +1,9 @@
+user:
+  maximum_name: 20
+  maximum_email: 255
+  minimum_password: 6
+post:
+  maximum_title: 50
+  maximum_content: 140
+comment:
+  maximum_content: 140
