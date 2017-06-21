@@ -20,6 +20,18 @@ en:
       signup: "Sign up"
       users: "Users"
       vietnamese: "Vietnamese"
+  posts:
+    create:
+      create_post: "Create post success"
+      failed_create: "Create post failed"
+    destroy:
+      delete_success: "Delete post success"
+      failed_delete: "Delete post failed"
+    post:
+      ago: "ago"
+      delete: "Delete"
+      posted: "Posted"
+      sure: "Are you sure?"
   sessions:
     create:
       failed_login: "Log in failed"
@@ -53,6 +65,13 @@ en:
       password: "Password"
       remember_me: "Remember me on this computer"
       signup_now: "Sign up now!"
+    post_form:
+      compose:  "Compose new micropost..."
+      post: "Post"
+      title: "Title"
+    user_info:
+      post: "Post"
+      view_profile: "View my profile"
   users:
     create:
       signup_success: "Welcome to the app"
