@@ -1,15 +1,19 @@
 <% provide :title, t(".users") %>
 <h1><%= t ".all_users" %></h1>
 
+<%= will_paginate %>
+
 <ul class="users">
   <% @users.each do |user| %>
     <li>
-      <%= gravatar_for user %>
+      <%= gravatar_for user, size: Settings.user.avtar_size %>
       <%= link_to user.name, user %>
+      <% if current_user.is_admin? && !user.is_user?(current_user) %>
+        <button type="button" class="btn btn-info btn-sm">
+          <%= link_to t(".delete"), user, method: :delete,
+            data: {confirm: t(".confirm")} %>
+        </button>
+      <% end %>
     </li>
   <% end %>
 </ul>
-
-<div class="page-center">
-  <%= will_paginate %>
-</div>
