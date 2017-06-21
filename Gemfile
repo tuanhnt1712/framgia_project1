@@ -7,6 +7,7 @@ end
 
 gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass", "3.3.6"
+gem "bootstrap-will_paginate", "1.0.0"
 gem "coffee-rails", "~> 4.2"
 gem "config", "1.2.1"
 gem "jbuilder", "~> 2.5"
@@ -17,6 +18,7 @@ gem "sqlite3"
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "will_paginate", "3.1.5"
 
 
 group :development, :test do
