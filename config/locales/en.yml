@@ -54,14 +54,27 @@ en:
       remember_me: "Remember me on this computer"
       signup_now: "Sign up now!"
   users:
+    create:
+      signup_success: "Welcome to the app"
+      error_signup: "sign up failed"
+    edit:
+      change: "Change"
+      correct: "Permission denied!!!"
+      please_login: "Please log in."
+      save_change: "Save Change"
+      update_profile: "Update Profile"
     form:
       confirmation: "Confirmation"
       email: "Email"
       name: "Name"
       password: "Password"
+    index:
+      users: Users
+      all_users: "All Users"
     new:
       create_account: "Create my account"
       signup: "Sign up"
-    create:
-      signup_success: "Welcome to the app"
-      error_signup: "sign up failed"
+    update:
+      please_login: "Please log in."
+      update_failed: "Update failed"
+      update_success: "Update successfully"

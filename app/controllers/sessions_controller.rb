@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:success] = t ".login_success"
       redirect_to user
     else
-      flash.now[:danger] = t ".failed_login"
+      flash[:danger] = t ".failed_login"
       redirect_to :back
     end
   end
