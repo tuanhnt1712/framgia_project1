@@ -51,6 +51,7 @@ en:
       name: "Name"
       new_user: "New user? "
       password: "Password"
+      remember_me: "Remember me on this computer"
       signup_now: "Sign up now!"
   users:
     form:
