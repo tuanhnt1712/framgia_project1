@@ -1,5 +1,12 @@
 <% provide :title, t(".home") %>
-<div class="container-responsive">
+<% if logged_in? %>
+  <aside class="col-md-4">
+    <section>
+      <h1><%= current_user.name %></h1>
+    </section>
+  </aside>
+<% else %>
+  <div class="container-responsive">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-8">
         <div class="center jumbotron">
@@ -10,6 +17,8 @@
       </div>
       <div class="col-xs-6 col-md-4">
         <h3><%= t ".login" %></h3>
+        <%= render "shared/form_login" %>
       </div>
     </div>
   </div>
+<% end %>
