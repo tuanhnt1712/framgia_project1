@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, except: [:new, :create, :show]
   before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
+  before_action :user_admin, only: :destroy
 
   def index
     @users = User.select(:id, :name, :email).sort_by_id
@@ -39,6 +40,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if @user.destroy
+      flash[:success] = t ".deleted_user"
+      redirect_to users_url
+    else
+      flash.now[:alert] = t ".delete_failed"
+      redirect_to root_path
+    end
+  end
+
   private
 
   def user_params
@@ -58,5 +69,9 @@ class UsersController < ApplicationController
     return if @user.is_user? current_user
     flash[:danger] = t ".correct"
     redirect_to root_url
+  end
+
+  def user_admin
+    redirect_to root_url unless current_user.is_admin?
   end
 end
