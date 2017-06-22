@@ -1,4 +1,11 @@
 en:
+  comments:
+    create:
+      create_success: "Comment has been created."
+      error: "create comment failed"
+    destroy:
+      delete_success: "Delete comment success"
+      failed_delete: "Delete comment failed"
   layouts:
     application:
       title: "Ruby on Rails Project 1"
@@ -29,6 +36,7 @@ en:
       failed_delete: "Delete post failed"
     post:
       ago: "ago"
+      add: "Add"
       delete: "Delete"
       posted: "Posted"
       sure: "Are you sure?"

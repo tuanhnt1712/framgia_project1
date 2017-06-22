@@ -13,7 +13,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:success] = t ".create_post"
-      redirect_to root_url
+      redirect_to :back
     else
       @feed_items = []
       flash.now[:danger] = t ".failed_create"
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     else
       flash.now[:alert] = t ".failed_delete"
     end
-    redirect_to root_url
+    redirect_to :back
   end
 
   private

@@ -15,3 +15,7 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+$('#flash-message').delay(5000).fadeOut(300);
+ });

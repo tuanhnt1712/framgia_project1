@@ -1,14 +1,60 @@
 <li id="post-<%= post.id %>">
-  <%= link_to gravatar_for(post.user, size: Settings.user.avatar_size),
-    post.user %>
-  <span class="user_name"><%= link_to post.user.name, post.user %></span>
-  <span class="title"><%= post.title %></span>
-  <span class="content"><%= post.content %></span>
-  <span class="timestamp">
-    <%= t ".posted" %> <%= time_ago_in_words post.created_at %><%= t ".ago" %>
-    <% if post.user.is_user? current_user %>
-      <%= link_to t(".delete"), post, method: :delete,
-        data: {confirm: t(".sure")} %>
+  <div class="post-box">
+    <%= link_to gravatar_for(post.user, size: Settings.user.avatar_size),
+      post.user %>
+    <h3 class="user-name"><%= link_to post.user.name, post.user %></h3>
+    <h4 class="post-title"><%= link_to post.title, "#" %></h4>
+    <span class="content">
+      <%= post.content %>
+    </span>
+    <span class="timestamp">
+      <%= post.created_at %>
+      <span style="float: right;">
+        <% if post.user.is_user? current_user %>
+          <%= link_to t(".delete"), post, method: :delete,
+            data: {confirm: t(".sure")} %>
+        <% end %>
+      </span>
+    </span>
+    <div class="actionBox">
+      <ul class="commentList">
+        <% post.comments.each do |comment| %>
+          <div class="input-group comment-user">
+            <span class="input-group-addon comment-form"><%= link_to gravatar_for(comment.user, size: Settings.comment.avatar_size),
+              comment.user %></span>
+            <div class="">
+              <%= link_to comment.user.name, comment.user %>
+              <%= comment.content %>
+            </div>
+            <span class="sub-text">
+              <%= time_ago_in_words comment.created_at %>
+                <% if comment.user.is_user? current_user %>
+                  <%= link_to t(".delete"), [comment.post, comment],
+                    method: :delete, data: {confirm: t(".sure")} %>
+              <% end %>
+            </span>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+    <% if logged_in? %>
+      <div class="comment">
+        <%= form_for([post, post.comments.build]) do |f| %>
+          <div class="input-group">
+            <span class="input-group-addon comment-form"><%= link_to gravatar_for(current_user, size: Settings.comment.avatar_size),
+              current_user %>
+            </span>
+            <div class="form-inline">
+              <div class="form-group post-comment">
+                <%= f.text_field :content, class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.submit t(".add"), class: "btn btn-sm btn-primary" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-  </span>
+  </div>
 </li>
