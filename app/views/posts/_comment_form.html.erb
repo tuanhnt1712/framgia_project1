@@ -1,4 +1,4 @@
-<div class="comment" data-postid=<%= post.id %> >  
+<div class="comment">  
   <%= form_for([post, post.comments.build], remote: true) do |f| %>
     <div class="input-group">
       <span class="input-group-addon comment-form"><%= link_to gravatar_for(current_user, size: Settings.comment.avatar_size),

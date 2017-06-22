@@ -6,6 +6,8 @@ en:
     destroy:
       delete_success: "Delete comment success"
       failed_delete: "Delete comment failed"
+  post:
+    less_size: "should be less than 5MB"
   layouts:
     application:
       title: "Ruby on Rails Project 1"
@@ -46,6 +48,9 @@ en:
       delete: "Delete"
       posted: "Posted"
       sure: "Are you sure?"
+    edit:
+      edit_post: Edit Post
+      save_change: "Save change"
   sessions:
     create:
       failed_login: "Log in failed"
@@ -64,6 +69,7 @@ en:
     home:
       home: "Home"
       login: "Log in"
+      post: "Post"
       pragraph: "We hope that my page will be useful with you"
       signup: "Sign up now!"
       welcome: "Welcome to my page"
@@ -81,7 +87,7 @@ en:
       signup_now: "Sign up now!"
     post_form:
       compose:  "Compose new micropost..."
-      post: "Post"
+      content: "Content"
       title: "Title"
     stats:
       following: "Following"

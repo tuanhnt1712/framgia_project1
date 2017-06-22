@@ -8,6 +8,7 @@ user:
 post:
   maximun_title: 50
   posts_per_page: 10
+  size_picture: 3
 comment:
   avatar_size: 30
 helper:

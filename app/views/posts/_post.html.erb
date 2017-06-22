@@ -6,11 +6,13 @@
     <h4 class="post-title"><strong><%= post.title %></strong></h4>
     <span class="content">
       <%= post.content %>
+      <%= image_tag post.picture.url if post.picture? %>
     </span>
     <span class="timestamp">
       <%= post.created_at %>
       <span style="float: right;">
         <% if post.user.is_user? current_user %>
+          <%= link_to t(".edit"), edit_post_path(post) %>
           <%= link_to t(".delete"), post, method: :delete,
             data: {confirm: t(".sure")} %>
         <% end %>

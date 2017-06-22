@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
-  before_action :correct_user, only: :destroy
+  before_action :correct_user, only: [:destroy, :edit, :update]
 
   def index
-    @posts = Post.select(:id, :title, :content, :user_id, :created_at)
+    @posts = Post.select(:id, :title, :content, :picture, :user_id, :created_at)
       .sort_by_created_at.paginate page: params[:page],
       per_page: Settings.post.posts_per_page
   end
@@ -21,6 +21,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @post.update_attributes post_params
+      flash[:success] = t ".update_success"
+      redirect_to :back
+    else
+      flash.now[:danger] = t ".update_failed"
+      render :edit
+    end
+  end
+
   def destroy
     if @post.destroy
       flash[:success] = t ".delete_success"
@@ -33,7 +46,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit :title, :content
+    params.require(:post).permit :title, :content, :picture
   end
 
   def correct_user
