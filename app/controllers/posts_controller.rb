@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.select(:id, :title, :content, :user_id, :created_at)
-      .sort_by_created_at.paginate page: params[:page], 
+      .sort_by_created_at.paginate page: params[:page],
       per_page: Settings.post.posts_per_page
   end
 
@@ -15,6 +15,7 @@ class PostsController < ApplicationController
       flash[:success] = t ".create_post"
       redirect_to root_url
     else
+      @feed_items = []
       flash.now[:danger] = t ".failed_create"
       render "static_pages/home"
     end
