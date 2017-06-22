@@ -7,4 +7,6 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: {maximum: Settings.post.maximum_content}
 
   scope :sort_by_created_at, ->{order created_at: :desc}
+  scope :feed_load, lambda{|x,y|
+    where("user_id IN (?) OR user_id = ?", x, y)}
 end
