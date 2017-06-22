@@ -127,18 +127,22 @@ aside {
   section.user_info {
     margin-top: 20px;
   }
+
   section {
     margin-top: 20px;
     padding: 10px 0;
+
     &:first-child {
       border: 0;
       padding-top: 0;
     }
+
     span {
       display: block;
       line-height: 1;
       margin-bottom: 3px;
     }
+
     h1 {
       font-size: 1.4em;
       letter-spacing: -1px;
@@ -160,9 +164,11 @@ aside {
 .user_avatars {
   margin-top: 10px;
   overflow: auto;
+
   .gravatar {
     margin: 1px;
   }
+
   a {
     padding: 0;
   }
@@ -172,20 +178,24 @@ aside {
   overflow: auto;
   margin-top: 0;
   padding: 0;
+
   a {
     border-left: 1px solid $gray-lighter;
     color: $gray;
     float: left;
     padding: 0 10px;
+
     &:first-child {
       border: 0;
       padding-left: 0;
     }
+
     &:hover {
       color: $blue;
       text-decoration: none;
     }
   }
+
   strong {
     display: block;
   }
@@ -194,9 +204,11 @@ aside {
 .user_avatars {
   margin-top: 10px;
   overflow: auto;
+
   .gravatar {
     margin: 1px;
   }
+
   a {
     padding: 0;
   }
@@ -221,6 +233,7 @@ input {
 
 #error_explanation {
   color: $red;
+
   ul {
     color: $red;
     margin-left: 30px;
@@ -229,6 +242,7 @@ input {
 
 .field_with_errors {
   @extend .has-error;
+
   .form-control {
     color: $state-danger-text;
   }
@@ -236,6 +250,7 @@ input {
 
 .checkbox {
   margin: -10px 0 10px 0;
+
   span {
     margin-left: 20px;
     font-weight: normal;
@@ -251,6 +266,7 @@ input {
 .users {
   list-style: none;
   margin: 0;
+
   li {
     overflow: auto;
     padding: 10px 0;
@@ -263,27 +279,76 @@ input {
 .posts {
   list-style: none;
   padding: 0;
+
   li {
     border-top: 1px solid #light-gray;
     padding: 10px 0;
   }
-  .user_name {
-    margin-top: 5em;
-    padding-top: 0;
+
+  .actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
   }
-  .content {
-    display: block;
+
+  .commentList {
+    padding-left: 0;
+  }
+
+  .post-box {
+    padding:10px;
+    border:1px solid #bbb;
+  }
+
+  .user-name{
+    margin-top: 0px;
+  }
+
+  .post-title {
     margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
+  }
+
+  .comment-user {
+    margin-bottom: 10px;
+  }
+
+  .sub-text {
+    font-family:verdana;
+    font-size:11px;
+    color: $gray-light;
+    display: block;
+  }
+
+  .comment-form {
+    background-color: #fff;
+    padding: 0 0;
+    border: none;
+  }
+
+  .comment {
+    .post-comment {
+      width: 90%;
+    }
+
+    .content {
+      border-radius: 10px;
+    }
+
+    .submit {
+      float: right;
+      margin-top: 10px;
+      width: 75px;
     }
   }
+  .content img{
+      display: block;
+      padding: 5px 0;
+  }
+
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
   }
+
   .gravatar {
     float: left;
     margin: 0 10px 0 5px;
@@ -291,6 +356,7 @@ input {
 }
 
 aside {
+
   textarea {
     height: 100px;
     margin-bottom: 5px;
