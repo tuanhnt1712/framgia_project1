@@ -282,11 +282,12 @@ input {
 
   li {
     border-top: 1px solid #light-gray;
+    list-style-type: none;
     padding: 10px 0;
   }
 
   .actionBox {
-    border-top:1px dotted #bbb;
+    border-top:1px dotted $gray-darker;
     padding:10px;
   }
 
@@ -295,8 +296,8 @@ input {
   }
 
   .post-box {
+    border:1px solid $gray-darker;
     padding:10px;
-    border:1px solid #bbb;
   }
 
   .user-name{
@@ -311,17 +312,29 @@ input {
     margin-bottom: 10px;
   }
 
+  .comment-form-list {
+    background-color: $white;
+    border: none;
+    float: left;
+    padding: 0 0;
+  }
+
+  .comment-text {
+    margin-left: 45px;
+  }
+
   .sub-text {
-    font-family:verdana;
-    font-size:11px;
     color: $gray-light;
     display: block;
+    font-family:verdana;
+    font-size:11px;
+    margin-left: 45px;
   }
 
   .comment-form {
-    background-color: #fff;
-    padding: 0 0;
+    background-color: $white;
     border: none;
+    padding: 0 0;
   }
 
   .comment {
@@ -339,7 +352,7 @@ input {
       width: 75px;
     }
   }
-  .content img{
+  .content img {
       display: block;
       padding: 5px 0;
   }
@@ -347,6 +360,7 @@ input {
   .timestamp {
     color: $gray-light;
     display: block;
+    margin-top: 5px;
   }
 
   .gravatar {
