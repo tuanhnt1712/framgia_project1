@@ -51,6 +51,9 @@ en:
     edit:
       edit_post: Edit Post
       save_change: "Save change"
+    update:
+      update_success: "Update successfully"
+      update_failed: "Update failed"
   sessions:
     create:
       failed_login: "Log in failed"

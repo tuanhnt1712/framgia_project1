@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @posts = @user.posts.select(:id, :title, :content, :user_id, :created_at) 
+    @posts = @user.posts.select(:id, :title, :content, :picture, :user_id, :created_at) 
       .sort_by_created_at.paginate page: params[:page], 
       per_page: Settings.post.posts_per_page
   end
