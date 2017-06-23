@@ -24,9 +24,11 @@
       </ul>
     </div>
     <% if logged_in? %>
-      <div id="comment-form-<%= post.id %>">
-        <%= render "posts/comment_form", post: post, comment: post.comments.build %>
-      </div>
+      <% if  current_user.following?(post.user) || post.user.is_user?(current_user) %>
+        <div id="comment-form-<%= post.id %>">
+          <%= render "posts/comment_form", post: post, comment: post.comments.build %>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </li>
