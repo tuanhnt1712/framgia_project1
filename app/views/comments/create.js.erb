@@ -1,0 +1,2 @@
+$('#comments-list-<%= @post.id %>').append('<%= j render partial: "posts/comment", locals:{comment: @comment} %>');
+$('#comment-form-<%= @post.id %>').replaceWith('<%= j render partial: "posts/comment_form", locals:{post: @post} %>');

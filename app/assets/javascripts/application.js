@@ -16,6 +16,6 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
+$(function(){
 $('#flash-message').delay(5000).fadeOut(300);
  });

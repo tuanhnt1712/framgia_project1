@@ -28,15 +28,21 @@ en:
       users: "Users"
       vietnamese: "Vietnamese"
   posts:
+    comment:
+      sure: "Are you sure?"
+    comment_form:
+      add: "Add"
     create:
       create_post: "Create post success"
       failed_create: "Create post failed"
     destroy:
       delete_success: "Delete post success"
       failed_delete: "Delete post failed"
+    index:
+      posts: Posts
+      all_posts: "All Posts"
     post:
       ago: "ago"
-      add: "Add"
       delete: "Delete"
       posted: "Posted"
       sure: "Are you sure?"

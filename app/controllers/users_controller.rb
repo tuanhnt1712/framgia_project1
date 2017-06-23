@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, except: [:new, :create, :show]
+  before_action :logged_in_user, except: [:index, :new, :create, :show]
   before_action :load_user, except: [:index, :new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :user_admin, only: :destroy
@@ -46,8 +46,13 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t ".deleted_user"
-      redirect_to users_url
+      respond_to do |format|
+        format.html do
+          flash[:success] = t ".deleted_user"
+          redirect_to users_url
+        end
+        format.js
+      end
     else
       flash.now[:alert] = t ".delete_failed"
       redirect_to root_path

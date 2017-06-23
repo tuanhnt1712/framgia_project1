@@ -6,8 +6,13 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      flash[:success] = t ".create_success"
-      redirect_to :back
+      respond_to do |format|
+        format.html do
+          flash[:success] = t ".create_success"
+          redirect_to :back
+        end
+        format.js
+      end
     else
       flash[:danger] = t ".error"
       redirect_to :back
@@ -17,12 +22,14 @@ class CommentsController < ApplicationController
   def destroy
     @comment = @post.comments.find_by id: params[:id]
 
-    if @comment.destroy
-      flash[:success] = t ".delete_success"
-    else
-      flash.now[:alert] = t ".failed_delete"
+    @comment.destroy
+    respond_to do |format|
+      format.html do
+        flash[:success] = t ".delete_success"
+        redirect_to :back
+      end
+      format.js
     end
-    redirect_to :back
   end
 
   private

@@ -1,0 +1,17 @@
+<div class="comment" data-postid=<%= post.id %> >  
+  <%= form_for([post, post.comments.build], remote: true) do |f| %>
+    <div class="input-group">
+      <span class="input-group-addon comment-form"><%= link_to gravatar_for(current_user, size: Settings.comment.avatar_size),
+        current_user %>
+      </span>
+      <div class="form-inline">
+        <div class="form-group post-comment">
+          <%= f.text_field :content, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit t(".add"), class: "btn btn-sm btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
