@@ -353,8 +353,8 @@ input {
     }
   }
   .content img {
-      display: block;
-      padding: 5px 0;
+    display: block;
+    padding: 5px 0;
   }
 
   .timestamp {
@@ -368,6 +368,10 @@ input {
     margin: 0 10px 0 5px;
   }
 }
+
+.word-break {
+    word-break: break-word;
+  }
 
 aside {
 
