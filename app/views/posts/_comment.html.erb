@@ -1,7 +1,7 @@
 <div class="input-group comment-user", id="comment_<%= comment.id %>">
   <span class="input-group-addon comment-form-list"><%= link_to gravatar_for(comment.user, size: Settings.comment.avatar_size),
     comment.user %></span>
-  <div class="comment-text">
+  <div class="comment-text word-break">
     <%= link_to comment.user.name, comment.user %>
     <%= comment.content %>
   </div>
